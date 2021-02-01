@@ -22,3 +22,7 @@ def digital_root(n):
     while curr_sum > 9:
         curr_sum = digitizer(curr_sum)
     return curr_sum
+
+# most efficient solution
+def digital_root(n):
+    return n if n < 10 else digital_root(sum(map(int,str(n))))
