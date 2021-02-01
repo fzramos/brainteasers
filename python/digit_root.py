@@ -24,5 +24,5 @@ def digital_root(n):
     return curr_sum
 
 # most efficient solution
-def digital_root(n):
+def digital_root_efficient(n):
     return n if n < 10 else digital_root(sum(map(int,str(n))))
