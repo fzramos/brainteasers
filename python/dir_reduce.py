@@ -1,10 +1,8 @@
-# initial, very rough recursive solution
+# recursive solution
 def dirReduce(arr):
-    NS = set(['NORTH', 'SOUTH'])
-    WE = set(['EAST', 'WEST'])
+    pairs = [set(['NORTH', 'SOUTH']), set(['EAST', 'WEST'])]
     for i in range(len(arr) - 1):
-        comp = set([arr[i], arr[i+1]])
-        if comp == NS or comp == WE:
+        if set(arr[i:i+2]) in pairs:
             del arr[i:i+2]
             return dirReduce(arr)
 
