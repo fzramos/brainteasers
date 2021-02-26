@@ -15,7 +15,7 @@
 """
 
 # quick, inital solution
-def round_to_next5(n):
+def round_to_next5_inefficient(n):
     remain = n%5
     if remain == 0:
         return n
